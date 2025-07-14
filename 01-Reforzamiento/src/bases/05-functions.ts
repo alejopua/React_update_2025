@@ -33,10 +33,25 @@ function objectoFunction(): { name: string; age: number } {
 }
 console.log(objectoFunction())
 
-const objectArrow = (): {name: string; age: number} => {
-    return {
+// const objectArrow = (): {name: string; age: number} => {
+//     return {
+//         name: 'Alejandro',
+//         age: 29
+//     }
+// }
+// console.log(objectArrow())
+
+interface User {
+    name: string;
+    age: number;
+}
+const objectArrow = (): User => ({
         name: 'Alejandro',
         age: 29
     }
-}
+)
 console.log(objectArrow())
+
+const myNumbers: number[] = [1,2,3,4,5]
+
+myNumbers.forEach((value)=>(console.log(value)))
