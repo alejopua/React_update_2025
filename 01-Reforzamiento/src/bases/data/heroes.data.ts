@@ -4,7 +4,7 @@
 
 // types --> Son alias para tipos de datos, permitiendo crear tipos personalizados y más complejos a partir de tipos primitivos o combinaciones de ellos.
 
-interface Hero {
+export interface Hero {
   id: number;
   name: string;
   owner: Owner;
@@ -12,12 +12,12 @@ interface Hero {
 
 // type Owner = 'DC' | 'Marvel';
 
-enum Owner {
-  DC = 'DC',
-  Marvel = 'Marvel',
+export enum Owner {
+  DC = 'DC', // 0
+  Marvel = 'Marvel', // 1
 }
 
-const heroes: Hero[] = [
+export const heroes: Hero[] = [
   {
     id: 1,
     name: 'Batman',
@@ -44,3 +44,9 @@ const heroes: Hero[] = [
     owner: Owner.Marvel,
   },
 ];
+
+// export default heroes; --> import  heroesFromDC from './heroes.data';
+
+// export const heroes: Hero[] = [... --> import { heroes } from './heroes.data';
+
+// Para exportar interfaces, tipos, en las exportaciones anteponemos la palabra type --> import { type Hero } from './heroes.data';
